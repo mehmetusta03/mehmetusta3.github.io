@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mehmet Usta | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">mehmetusta</a>
+            <ul class="nav-links">
+                <li><a href="#hakkimda">Hakkımda</a></li>
+                <li><a href="#projeler">Projeler</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="#iletisim">İletişim</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <div class="avatar">MU</div>
+            <h1>Merhaba, ben <span>Mehmet</span> 👋</h1>
+            <p class="subtitle">Bilgisayar Mühendisliği Öğrencisi · Manisa Celal Bayar Üniversitesi</p>
+            <div class="hero-tags">
+                <span class="tag">Yazılım Geliştirme</span>
+                <span class="tag">Bilgisayar Ağları</span>
+                <span class="tag">Yapay Zeka</span>
+                <span class="tag">Hackathon</span>
+            </div>
+            <div>
+                <a href="#projeler" class="btn btn-primary">Projelerimi Gör</a>
+                <a href="https://github.com/mehmetusta03" class="btn btn-outline" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- HAKKIMDA -->
+    <section id="hakkimda">
+        <div class="container">
+            <h2 class="section-title">Hakkımda</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        Manisa Celal Bayar Üniversitesi'nde Bilgisayar Mühendisliği 3. sınıf öğrencisiyim.
+                        Ağlar, işletim sistemleri, bilgi mühendisliği ve yazılım geliştirme alanlarında
+                        disiplinlerarası akademik projelerde çalışıyorum.
+                    </p>
+                    <p>
+                        Vestel'de staj yaptım. MedHack hackathon'unda <strong>birinci</strong> oldum.
+                        Proje geliştirme, yarışma ve sürekli öğrenmeden büyük keyif alıyorum.
+                    </p>
+                    <div class="skills-list">
+                        <span class="skill-tag">C / C++</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">HTML / CSS / JS</span>
+                        <span class="skill-tag">React / Next.js</span>
+                        <span class="skill-tag">Cisco Packet Tracer</span>
+                        <span class="skill-tag">OWL / Protégé</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Linux</span>
+                    </div>
+                </div>
+                <div class="info-box">
+                    <div class="info-item">
+                        <span class="info-label">Okul</span>
+                        <span>Manisa CBÜ, Bilgisayar Müh.</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Sınıf</span>
+                        <span>3. Sınıf</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Staj</span>
+                        <span>Vestel</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Ödül</span>
+                        <span>🥇 MedHack 1. lik</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Şehir</span>
+                        <span>Manisa, Türkiye</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJELER -->
+    <section id="projeler">
+        <div class="container">
+            <h2 class="section-title">Projeler</h2>
+            <div class="projects-grid">
+
+                <a href="https://github.com/mehmetusta03/Knowledgeproject" target="_blank" class="project-card">
+                    <h3>⚽ Süper Lig Bilgi Ontolojisi</h3>
+                    <p>OWL 2 DL tabanlı, 300+ oyuncu ve tam sezon fikstürlerini içeren bilgi mühendisliği projesi.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">OWL 2 DL</span>
+                        <span class="project-tag">Protégé</span>
+                        <span class="project-tag">METHONTOLOGY</span>
+                    </div>
+                </a>
+
+                <div class="project-card">
+                    <h3>🌐 OSI Tabanlı Güvenli LAN</h3>
+                    <p>Cisco Packet Tracer ile tasarlanmış, OSI katmanlarını temel alan güvenli yerel ağ mimarisi.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Cisco Packet Tracer</span>
+                        <span class="project-tag">Ağ Güvenliği</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>🚢 Feribot Simülasyonu</h3>
+                    <p>POSIX thread'leri kullanan çok iş parçacıklı feribot simülasyonu (C → Java).</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Java</span>
+                        <span class="project-tag">POSIX</span>
+                        <span class="project-tag">İşletim Sistemleri</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>🌡️ PIC16F877A Sıcaklık İzleme</h3>
+                    <p>DHT11 sensörü ve I2C LCD ekran kullanan Assembly/C mikrodenetleyici projesi.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">PIC16F877A</span>
+                        <span class="project-tag">Assembly</span>
+                        <span class="project-tag">Proteus</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>📦 Lojistik Optimizasyonu</h3>
+                    <p>WMA tahmini ve Greedy+FFD bin packing algoritmalarıyla TEKNOFEST 2026 lojistik projesi.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">Algoritma</span>
+                        <span class="project-tag">TEKNOFEST</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>💧 AquaCampus</h3>
+                    <p>MCBÜ için sürdürülebilirlik odaklı su yönetimi projesi (Geleceğe Değer Kat yarışması).</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Sürdürülebilirlik</span>
+                        <span class="project-tag">Proje</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG ÖN İZLEME -->
+    <section id="blog">
+        <div class="container">
+            <h2 class="section-title">Son Yazılar</h2>
+            <div class="blog-list">
+
+                <a href="blog.html#ontoloji" class="blog-card">
+                    <div class="blog-date">
+                        <strong>12</strong>
+                        Haz 2025
+                    </div>
+                    <div class="blog-info">
+                        <h3>OWL ile Bilgi Ontolojisi Nasıl Oluşturulur?</h3>
+                        <p>Protégé ve METHONTOLOGY metodolojisi ile sıfırdan OWL ontolojisi geliştirme süreci.</p>
+                    </div>
+                </a>
+
+                <a href="blog.html#cisco" class="blog-card">
+                    <div class="blog-date">
+                        <strong>05</strong>
+                        May 2025
+                    </div>
+                    <div class="blog-info">
+                        <h3>Cisco Packet Tracer ile Güvenli LAN Tasarımı</h3>
+                        <p>VLAN, firewall kuralları ve OSI modeli çerçevesinde ağ güvenliği uygulamaları.</p>
+                    </div>
+                </a>
+
+                <a href="blog.html#hackathon" class="blog-card">
+                    <div class="blog-date">
+                        <strong>20</strong>
+                        Mar 2025
+                    </div>
+                    <div class="blog-info">
+                        <h3>MedHack Deneyimi: Birinci Olmak</h3>
+                        <p>24 saatlik bir hackathon'da neler yaşadım, ne öğrendim ve takım çalışması hakkında düşüncelerim.</p>
+                    </div>
+                </a>
+
+            </div>
+            <div style="margin-top: 1.5rem;">
+                <a href="blog.html" class="btn btn-outline">Tüm Yazılar →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- İLETİŞİM -->
+    <section id="iletisim">
+        <div class="container">
+            <h2 class="section-title">İletişim</h2>
+            <div class="contact-grid">
+                <div>
+                    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+                        Proje iş birliği, soru veya sadece merhaba demek için ulaşabilirsin!
+                    </p>
+                    <div class="contact-links">
+                        <a href="https://github.com/mehmetusta03" target="_blank" class="contact-link">
+                            <span>🐙</span> github.com/mehmetusta03
+                        </a>
+                        <a href="mailto:mehmet@ornek.com" class="contact-link">
+                            <span>📧</span> mehmet@ornek.com
+                        </a>
+                        <a href="https://linkedin.com/in/mehmetusta" target="_blank" class="contact-link">
+                            <span>💼</span> linkedin.com/in/mehmetusta
+                        </a>
+                    </div>
+                </div>
+                <div style="background: var(--bg-secondary); border-radius: 12px; padding: 1.5rem; border: 1px solid var(--border);">
+                    <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.8;">
+                        🎓 Manisa Celal Bayar Üniversitesi<br>
+                        🏆 MedHack 2025 — 1. lik<br>
+                        🏭 Vestel — Stajyer<br>
+                        📍 Manisa, Türkiye
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Mehmet Usta · HTML & CSS ile yapıldı ❤️</p>
+    </footer>
+
+</body>
+</html>
