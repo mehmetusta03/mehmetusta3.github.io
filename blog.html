@@ -1,182 +1,28 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog | Mehmet Usta</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .blog-page-header {
-            padding: 4rem 0 3rem;
-            text-align: center;
-        }
-        .blog-page-header h1 {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-        .blog-page-header p {
-            color: var(--text-muted);
-        }
-        .blog-full-list {
-            max-width: 700px;
-            margin: 0 auto;
-            padding: 0 1.5rem 5rem;
-        }
-        .blog-post-card {
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-bottom: 1.25rem;
-            transition: all 0.2s;
-        }
-        .blog-post-card:hover {
-            border-color: var(--primary);
-            box-shadow: 0 4px 12px rgba(37,99,235,0.08);
-        }
-        .blog-post-meta {
-            display: flex;
-            gap: 1rem;
-            align-items: center;
-            margin-bottom: 0.75rem;
-        }
-        .blog-post-date {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-        }
-        .blog-post-category {
-            font-size: 0.75rem;
-            background: #eff6ff;
-            color: var(--primary);
-            border: 1px solid #bfdbfe;
-            padding: 2px 10px;
-            border-radius: 999px;
-        }
-        .blog-post-card h2 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-        .blog-post-card p {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-        .read-more {
-            color: var(--primary);
-            text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 500;
-        }
-        .read-more:hover {
-            text-decoration: underline;
-        }
-        .new-post-notice {
-            background: #eff6ff;
-            border: 1px solid #bfdbfe;
-            border-radius: 10px;
-            padding: 1rem 1.25rem;
-            margin-bottom: 2rem;
-            font-size: 0.9rem;
-            color: var(--primary);
-        }
-    </style>
-</head>
-<body>
+mehmetusta
+Hakkımda
+Projeler
+Blog
+İletişim
+EN
+Blog ✍️
+Öğrendiklerimi ve proje deneyimlerimi paylaşıyorum.
 
-    <!-- NAV -->
-    <nav>
-        <div class="nav-inner">
-            <a href="index.html" class="nav-logo">mehmetusta</a>
-            <ul class="nav-links">
-                <li><a href="index.html#hakkimda">Hakkımda</a></li>
-                <li><a href="index.html#projeler">Projeler</a></li>
-                <li><a href="blog.html" style="color: var(--primary);">Blog</a></li>
-                <li><a href="index.html#iletisim">İletişim</a></li>
-            </ul>
-        </div>
-    </nav>
+Mart 2025
+Deneyim
+MedHack Deneyimi: Birinci Olmak
+Google'ın MedGemma LLM modelini tamamen cihaz üzerinde (local inference) çalıştırdık — sıfır hasta verisi makineden çıkmıyor. Next.js ile klinik kalitede bir chat arayüzü geliştirdik. Jüri, gizlilik odaklı mimari ve pratik klinik uygulanabilirliği gerekçesiyle birinci sıraya koydu.
 
-    <!-- HEADER -->
-    <div class="blog-page-header" style="background: var(--bg-secondary); border-bottom: 1px solid var(--border);">
-        <div class="container">
-            <h1>Blog ✍️</h1>
-            <p>Öğrendiklerimi, proje deneyimlerimi ve teknik notlarımı paylaşıyorum.</p>
-        </div>
-    </div>
+Devamını oku →
+Eylül 2025
+Staj
+Vestel Staj Deneyimi
+Vestel'de Kotlin ve Jetpack Compose kullanarak Android TV uygulama geliştirme sürecine katıldım. Yazılım mimarisi, UI tasarımı ve modern Android geliştirme konularında pratik bilgi kazandım.
 
-    <!-- BLOG LİSTESİ -->
-    <div class="blog-full-list">
-        <br>
-        <div class="new-post-notice">
-            💡 Bu blog yazıları örnek içeriktir. Kendi yazılarını ekleyerek özelleştirebilirsin!
-        </div>
+Devamını oku →
+Ocak 2025
+Android
+Jetpack Compose ile Modern Android Geliştirme
+XML layout'lardan Jetpack Compose'a geçiş sürecinde öğrendiklerimi ve iki yaklaşım arasındaki farkları anlattım.
 
-        <!-- YAZI 1 -->
-        <div class="blog-post-card" id="ontoloji">
-            <div class="blog-post-meta">
-                <span class="blog-post-date">12 Haziran 2025</span>
-                <span class="blog-post-category">Bilgi Mühendisliği</span>
-            </div>
-            <h2>OWL ile Bilgi Ontolojisi Nasıl Oluşturulur?</h2>
-            <p>
-                Süper Lig ontoloji projemde Protégé ve METHONTOLOGY metodolojisi kullandım.
-                Sınıfları, property'leri ve bireylerini tanımlamak aslında düşündüğümden çok daha
-                ilginç bir süreçti. 300+ oyuncu verisini nasıl modellediğimi anlattım.
-            </p>
-            <a href="#" class="read-more">Devamını oku →</a>
-        </div>
-
-        <!-- YAZI 2 -->
-        <div class="blog-post-card" id="cisco">
-            <div class="blog-post-meta">
-                <span class="blog-post-date">5 Mayıs 2025</span>
-                <span class="blog-post-category">Ağ Güvenliği</span>
-            </div>
-            <h2>Cisco Packet Tracer ile Güvenli LAN Tasarımı</h2>
-            <p>
-                Bilgisayar Ağları final projesinde OSI modeline dayalı güvenli bir LAN tasarladım.
-                VLAN segmentasyonu, ACL kuralları ve firewall konfigürasyonunu sıfırdan nasıl kurduğumu
-                adım adım anlattım.
-            </p>
-            <a href="#" class="read-more">Devamını oku →</a>
-        </div>
-
-        <!-- YAZI 3 -->
-        <div class="blog-post-card" id="hackathon">
-            <div class="blog-post-meta">
-                <span class="blog-post-date">20 Mart 2025</span>
-                <span class="blog-post-category">Deneyim</span>
-            </div>
-            <h2>MedHack Deneyimi: Birinci Olmak</h2>
-            <p>
-                24 saatlik bir hackathon'da takımımızla nasıl çalıştık, zaman baskısı altında
-                nasıl karar aldık ve birinci olduğumuzda neler hissettik. Hackathon'a ilk kez
-                katılacaklar için pratik tavsiyeler.
-            </p>
-            <a href="#" class="read-more">Devamını oku →</a>
-        </div>
-
-        <!-- YAZI 4 -->
-        <div class="blog-post-card" id="vestel">
-            <div class="blog-post-meta">
-                <span class="blog-post-date">10 Ekim 2024</span>
-                <span class="blog-post-category">Staj</span>
-            </div>
-            <h2>Vestel Stajından Öğrendiklerim</h2>
-            <p>
-                Türkiye'nin en büyük teknoloji şirketlerinden birinde staj yapmanın nasıl bir
-                deneyim olduğunu, endüstriyel yazılım geliştirme ortamının üniversiteden farklarını
-                ve teknik kazanımlarımı paylaşıyorum.
-            </p>
-            <a href="#" class="read-more">Devamını oku →</a>
-        </div>
-
-    </div>
-
-    <footer>
-        <p>© 2025 Mehmet Usta · HTML & CSS ile yapıldı ❤️</p>
-    </footer>
-
-</body>
-</html>
+Devamını oku →
+© 2025 Mehmet Usta · HTML & CSS ile yapıldı ❤️
