@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog | Mehmet Usta</title>
-    
     <style>
 * {
     margin: 0;
@@ -13,14 +12,15 @@
 }
 
 :root {
-    --primary: #2563eb;
-    --primary-dark: #1d4ed8;
-    --text: #1e293b;
-    --text-muted: #64748b;
+    --primary: #7c3aed;
+    --primary-dark: #6d28d9;
+    --primary-light: #ede9fe;
+    --primary-border: #c4b5fd;
+    --text: #1e1b4b;
+    --text-muted: #6b7280;
     --bg: #ffffff;
-    --bg-secondary: #f8fafc;
-    --border: #e2e8f0;
-    --card-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    --bg-secondary: #faf5ff;
+    --border: #e5e7eb;
 }
 
 body {
@@ -34,33 +34,35 @@ body {
 nav {
     position: sticky;
     top: 0;
-    background: rgba(255,255,255,0.95);
+    background: rgba(255,255,255,0.96);
     backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--border);
     z-index: 100;
 }
 
 .nav-inner {
-    max-width: 900px;
+    max-width: 920px;
     margin: 0 auto;
     padding: 0 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 60px;
+    height: 62px;
 }
 
 .nav-logo {
-    font-weight: 700;
-    font-size: 1.1rem;
+    font-weight: 800;
+    font-size: 1.15rem;
     color: var(--primary);
     text-decoration: none;
+    letter-spacing: -0.5px;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 2rem;
+    gap: 1.8rem;
+    align-items: center;
 }
 
 .nav-links a {
@@ -74,9 +76,26 @@ nav {
     color: var(--primary);
 }
 
+.lang-btn {
+    background: var(--primary-light);
+    border: 1px solid var(--primary-border);
+    color: var(--primary);
+    padding: 4px 14px;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 0.82rem;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.lang-btn:hover {
+    background: var(--primary);
+    color: white;
+}
+
 /* LAYOUT */
 .container {
-    max-width: 900px;
+    max-width: 920px;
     margin: 0 auto;
     padding: 0 1.5rem;
 }
@@ -91,38 +110,42 @@ section:nth-child(even) {
 
 /* HERO */
 .hero {
-    padding: 6rem 0 4rem;
+    padding: 7rem 0 5rem;
     text-align: center;
+    background: linear-gradient(135deg, #faf5ff 0%, #ffffff 60%);
 }
 
 .avatar {
-    width: 90px;
-    height: 90px;
+    width: 96px;
+    height: 96px;
     border-radius: 50%;
     background: var(--primary);
     color: white;
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 2.2rem;
+    font-weight: 800;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 1.5rem;
+    box-shadow: 0 4px 24px rgba(124,58,237,0.25);
 }
 
 .hero h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
+    font-size: 2.6rem;
+    font-weight: 800;
     margin-bottom: 0.5rem;
+    color: var(--text);
+    letter-spacing: -1px;
 }
 
-.hero h1 span {
+.hero h1 .highlight {
     color: var(--primary);
 }
 
 .hero .subtitle {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     color: var(--text-muted);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.75rem;
 }
 
 .hero-tags {
@@ -130,14 +153,14 @@ section:nth-child(even) {
     gap: 0.5rem;
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 2rem;
+    margin-bottom: 2.25rem;
 }
 
 .tag {
-    background: #eff6ff;
+    background: var(--primary-light);
     color: var(--primary);
-    border: 1px solid #bfdbfe;
-    padding: 4px 12px;
+    border: 1px solid var(--primary-border);
+    padding: 5px 14px;
     border-radius: 999px;
     font-size: 0.8rem;
     font-weight: 500;
@@ -145,11 +168,11 @@ section:nth-child(even) {
 
 .btn {
     display: inline-block;
-    padding: 0.6rem 1.5rem;
-    border-radius: 8px;
+    padding: 0.65rem 1.6rem;
+    border-radius: 10px;
     text-decoration: none;
     font-size: 0.9rem;
-    font-weight: 500;
+    font-weight: 600;
     transition: all 0.2s;
     margin: 0 0.3rem;
 }
@@ -157,30 +180,36 @@ section:nth-child(even) {
 .btn-primary {
     background: var(--primary);
     color: white;
+    box-shadow: 0 2px 12px rgba(124,58,237,0.3);
 }
 
 .btn-primary:hover {
     background: var(--primary-dark);
+    transform: translateY(-1px);
 }
 
 .btn-outline {
-    border: 1px solid var(--border);
-    color: var(--text);
+    border: 1.5px solid var(--primary-border);
+    color: var(--primary);
+    background: var(--primary-light);
 }
 
 .btn-outline:hover {
-    border-color: var(--primary);
-    color: var(--primary);
+    background: var(--primary);
+    color: white;
+    transform: translateY(-1px);
 }
 
 /* SECTION TITLE */
 .section-title {
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 800;
     margin-bottom: 2rem;
     padding-bottom: 0.75rem;
-    border-bottom: 2px solid var(--primary);
+    border-bottom: 3px solid var(--primary);
     display: inline-block;
+    color: var(--text);
+    letter-spacing: -0.5px;
 }
 
 /* ABOUT */
@@ -194,83 +223,144 @@ section:nth-child(even) {
 .about-text p {
     color: var(--text-muted);
     margin-bottom: 1rem;
+    font-size: 0.97rem;
 }
 
 .skills-list {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    margin-top: 1rem;
+    margin-top: 1.25rem;
 }
 
 .skill-tag {
-    background: var(--bg-secondary);
-    border: 1px solid var(--border);
-    padding: 4px 10px;
+    background: var(--primary-light);
+    border: 1px solid var(--primary-border);
+    padding: 4px 12px;
     border-radius: 6px;
     font-size: 0.8rem;
-    color: var(--text-muted);
+    color: var(--primary);
+    font-weight: 500;
 }
 
 .info-box {
     background: var(--bg);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 1.25rem;
+    border: 1.5px solid var(--primary-border);
+    border-radius: 14px;
+    padding: 1.35rem;
 }
 
 .info-item {
     display: flex;
     align-items: flex-start;
     gap: 0.75rem;
-    margin-bottom: 1rem;
-    font-size: 0.9rem;
+    margin-bottom: 0.9rem;
+    font-size: 0.88rem;
 }
 
-.info-item:last-child {
-    margin-bottom: 0;
-}
+.info-item:last-child { margin-bottom: 0; }
 
 .info-label {
     color: var(--text-muted);
-    min-width: 80px;
-    font-size: 0.8rem;
+    min-width: 72px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding-top: 2px;
+}
+
+/* EXPERIENCE */
+.exp-card {
+    background: var(--bg);
+    border: 1.5px solid var(--primary-border);
+    border-radius: 14px;
+    padding: 1.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+    gap: 1rem;
+}
+
+.exp-title {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--text);
+}
+
+.exp-company {
+    color: var(--primary);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.exp-date {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    background: var(--primary-light);
+    padding: 3px 10px;
+    border-radius: 999px;
+    white-space: nowrap;
+    border: 1px solid var(--primary-border);
+}
+
+.exp-list {
+    list-style: none;
+    padding: 0;
+}
+
+.exp-list li {
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    padding: 3px 0 3px 1rem;
+    position: relative;
+}
+
+.exp-list li::before {
+    content: '▸';
+    color: var(--primary);
+    position: absolute;
+    left: 0;
 }
 
 /* PROJECTS */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
     gap: 1.25rem;
 }
 
 .project-card {
     background: var(--bg);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 1.25rem;
+    border: 1.5px solid var(--border);
+    border-radius: 14px;
+    padding: 1.35rem;
     transition: all 0.2s;
-    text-decoration: none;
-    color: inherit;
-    display: block;
 }
 
 .project-card:hover {
     border-color: var(--primary);
-    box-shadow: 0 4px 12px rgba(37,99,235,0.1);
-    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(124,58,237,0.12);
+    transform: translateY(-3px);
 }
 
 .project-card h3 {
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 0.5rem;
+    color: var(--text);
 }
 
 .project-card p {
     color: var(--text-muted);
     font-size: 0.85rem;
     margin-bottom: 1rem;
+    line-height: 1.5;
 }
 
 .project-tags {
@@ -280,11 +370,13 @@ section:nth-child(even) {
 }
 
 .project-tag {
-    background: #f0f9ff;
-    color: #0369a1;
+    background: var(--primary-light);
+    color: var(--primary);
     font-size: 0.75rem;
-    padding: 2px 8px;
-    border-radius: 4px;
+    padding: 2px 9px;
+    border-radius: 5px;
+    font-weight: 500;
+    border: 1px solid var(--primary-border);
 }
 
 /* BLOG */
@@ -300,8 +392,8 @@ section:nth-child(even) {
     gap: 1.5rem;
     padding: 1.25rem;
     background: var(--bg);
-    border: 1px solid var(--border);
-    border-radius: 12px;
+    border: 1.5px solid var(--border);
+    border-radius: 14px;
     text-decoration: none;
     color: inherit;
     transition: all 0.2s;
@@ -309,34 +401,38 @@ section:nth-child(even) {
 
 .blog-card:hover {
     border-color: var(--primary);
-    transform: translateX(4px);
+    transform: translateX(5px);
+    box-shadow: 0 2px 12px rgba(124,58,237,0.1);
 }
 
 .blog-date {
-    font-size: 0.8rem;
+    font-size: 0.78rem;
     color: var(--text-muted);
-    min-width: 90px;
+    min-width: 80px;
     text-align: center;
-    background: var(--bg-secondary);
-    padding: 0.5rem;
-    border-radius: 8px;
+    background: var(--primary-light);
+    padding: 0.6rem;
+    border-radius: 10px;
+    border: 1px solid var(--primary-border);
 }
 
 .blog-date strong {
     display: block;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: var(--primary);
     line-height: 1;
+    font-weight: 800;
 }
 
 .blog-info h3 {
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 0.97rem;
+    font-weight: 700;
     margin-bottom: 0.25rem;
+    color: var(--text);
 }
 
 .blog-info p {
-    font-size: 0.85rem;
+    font-size: 0.84rem;
     color: var(--text-muted);
 }
 
@@ -350,26 +446,27 @@ section:nth-child(even) {
 .contact-links {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.9rem;
 }
 
 .contact-link {
     display: flex;
     align-items: center;
     gap: 1rem;
-    padding: 1rem 1.25rem;
+    padding: 0.9rem 1.25rem;
     background: var(--bg);
-    border: 1px solid var(--border);
-    border-radius: 10px;
+    border: 1.5px solid var(--border);
+    border-radius: 12px;
     text-decoration: none;
     color: var(--text);
     transition: all 0.2s;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
 }
 
 .contact-link:hover {
     border-color: var(--primary);
     color: var(--primary);
+    background: var(--primary-light);
 }
 
 .contact-link span {
@@ -383,114 +480,114 @@ footer {
     border-top: 1px solid var(--border);
     color: var(--text-muted);
     font-size: 0.85rem;
+    background: var(--bg-secondary);
 }
 
 /* RESPONSIVE */
-@media (max-width: 600px) {
-    .hero h1 { font-size: 1.8rem; }
+@media (max-width: 640px) {
+    .hero h1 { font-size: 1.9rem; }
     .about-grid { grid-template-columns: 1fr; }
     .contact-grid { grid-template-columns: 1fr; }
     .nav-links { gap: 1rem; }
+    .exp-header { flex-direction: column; gap: 0.5rem; }
 }
 
-
         .blog-page-header { padding: 4rem 0 3rem; text-align: center; background: var(--bg-secondary); border-bottom: 1px solid var(--border); }
-        .blog-page-header h1 { font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .blog-page-header h1 { font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem; letter-spacing: -0.5px; }
         .blog-page-header p { color: var(--text-muted); }
-        .blog-full-list { max-width: 700px; margin: 0 auto; padding: 2rem 1.5rem 5rem; }
-        .blog-post-card { border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.25rem; transition: all 0.2s; }
-        .blog-post-card:hover { border-color: var(--primary); box-shadow: 0 4px 12px rgba(37,99,235,0.08); }
+        .blog-full-list { max-width: 720px; margin: 0 auto; padding: 2.5rem 1.5rem 5rem; }
+        .blog-post-card { border: 1.5px solid var(--border); border-radius: 14px; padding: 1.5rem; margin-bottom: 1.25rem; transition: all 0.2s; }
+        .blog-post-card:hover { border-color: var(--primary); box-shadow: 0 4px 20px rgba(124,58,237,0.1); }
         .blog-post-meta { display: flex; gap: 1rem; align-items: center; margin-bottom: 0.75rem; }
         .blog-post-date { font-size: 0.8rem; color: var(--text-muted); }
-        .blog-post-category { font-size: 0.75rem; background: #eff6ff; color: var(--primary); border: 1px solid #bfdbfe; padding: 2px 10px; border-radius: 999px; }
-        .blog-post-card h2 { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; }
+        .blog-post-category { font-size: 0.75rem; background: var(--primary-light); color: var(--primary); border: 1px solid var(--primary-border); padding: 2px 10px; border-radius: 999px; font-weight: 600; }
+        .blog-post-card h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text); }
         .blog-post-card p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem; }
-        .read-more { color: var(--primary); text-decoration: none; font-size: 0.85rem; font-weight: 500; }
+        .read-more { color: var(--primary); text-decoration: none; font-size: 0.85rem; font-weight: 600; }
         .read-more:hover { text-decoration: underline; }
+
     </style>
 </head>
 <body>
 
-    <nav>
-        <div class="nav-inner">
-            <a href="index.html" class="nav-logo">mehmetusta</a>
-            <ul class="nav-links">
-                <li><a href="index.html#hakkimda" data-tr="Hakkımda" data-en="About">Hakkımda</a></li>
-                <li><a href="index.html#projeler" data-tr="Projeler" data-en="Projects">Projeler</a></li>
-                <li><a href="blog.html" style="color:var(--primary);">Blog</a></li>
-                <li><a href="index.html#iletisim" data-tr="İletişim" data-en="Contact">İletişim</a></li>
-                <li>
-                    <button onclick="toggleLang()" id="lang-btn" style="background:none;border:1px solid var(--border);padding:4px 12px;border-radius:6px;cursor:pointer;font-size:0.85rem;color:var(--text-muted);">EN</button>
-                </li>
-            </ul>
-        </div>
-    </nav>
+<nav>
+    <div class="nav-inner">
+        <a href="index.html" class="nav-logo">mehmetusta</a>
+        <ul class="nav-links">
+            <li><a href="index.html#about" data-tr="Hakkımda" data-en="About">Hakkımda</a></li>
+            <li><a href="index.html#projects" data-tr="Projeler" data-en="Projects">Projeler</a></li>
+            <li><a href="blog.html" style="color:var(--primary);font-weight:700;">Blog</a></li>
+            <li><a href="index.html#contact" data-tr="İletişim" data-en="Contact">İletişim</a></li>
+            <li><button class="lang-btn" onclick="toggleLang()" id="lang-btn">EN</button></li>
+        </ul>
+    </div>
+</nav>
 
-    <div class="blog-page-header">
-        <div class="container">
-            <h1>Blog ✍️</h1>
-            <p data-tr="Öğrendiklerimi ve proje deneyimlerimi paylaşıyorum." data-en="Sharing what I learn and my project experiences.">Öğrendiklerimi ve proje deneyimlerimi paylaşıyorum.</p>
+<div class="blog-page-header">
+    <div class="container">
+        <h1>Blog ✍️</h1>
+        <p data-tr="Öğrendiklerimi ve proje deneyimlerimi paylaşıyorum." data-en="Sharing what I learn and my project experiences.">Öğrendiklerimi ve proje deneyimlerimi paylaşıyorum.</p>
+    </div>
+</div>
+
+<div class="blog-full-list">
+
+    <div class="blog-post-card" id="medhack">
+        <div class="blog-post-meta">
+            <span class="blog-post-date">Mart 2025</span>
+            <span class="blog-post-category" data-tr="Deneyim" data-en="Experience">Deneyim</span>
         </div>
+        <h2 data-tr="MedHack Deneyimi: Birinci Olmak 🥇" data-en="MedHack Experience: Winning 1st Place 🥇">MedHack Deneyimi: Birinci Olmak 🥇</h2>
+        <p data-tr="Google'ın MedGemma LLM modelini tamamen cihaz üzerinde çalıştırdık — sıfır hasta verisi dışarı çıkmıyor. Next.js ile klinik kalitede chat arayüzü geliştirdik. Jüri, gizlilik odaklı mimari ve klinik uygulanabilirliği gerekçesiyle birinci sıraya koydu."
+           data-en="We deployed Google's MedGemma LLM entirely on-device — zero patient data leaves the machine. Built a clinical-grade chat UI with Next.js. Judges awarded 1st place citing privacy-first architecture and practical clinical applicability.">
+            Google'ın MedGemma LLM modelini tamamen cihaz üzerinde çalıştırdık — sıfır hasta verisi dışarı çıkmıyor. Next.js ile klinik kalitede chat arayüzü geliştirdik. Jüri, gizlilik odaklı mimari ve klinik uygulanabilirliği gerekçesiyle birinci sıraya koydu.
+        </p>
+        <a href="#" class="read-more" data-tr="Devamını oku →" data-en="Read more →">Devamını oku →</a>
     </div>
 
-    <div class="blog-full-list">
-
-        <div class="blog-post-card" id="medhack">
-            <div class="blog-post-meta">
-                <span class="blog-post-date">Mart 2025</span>
-                <span class="blog-post-category" data-tr="Deneyim" data-en="Experience">Deneyim</span>
-            </div>
-            <h2 data-tr="MedHack Deneyimi: Birinci Olmak" data-en="MedHack Experience: Winning 1st Place">MedHack Deneyimi: Birinci Olmak</h2>
-            <p data-tr="Google'ın MedGemma LLM modelini tamamen cihaz üzerinde (local inference) çalıştırdık — sıfır hasta verisi makineden çıkmıyor. Next.js ile klinik kalitede bir chat arayüzü geliştirdik. Jüri, gizlilik odaklı mimari ve pratik klinik uygulanabilirliği gerekçesiyle birinci sıraya koydu."
-               data-en="We deployed Google's MedGemma LLM entirely on-device (local inference) — zero patient data leaves the machine. Built a clinical-grade chat UI with Next.js. Judges awarded 1st place citing privacy-first architecture and practical clinical applicability.">
-                Google'ın MedGemma LLM modelini tamamen cihaz üzerinde (local inference) çalıştırdık — sıfır hasta verisi makineden çıkmıyor. Next.js ile klinik kalitede bir chat arayüzü geliştirdik. Jüri, gizlilik odaklı mimari ve pratik klinik uygulanabilirliği gerekçesiyle birinci sıraya koydu.
-            </p>
-            <a href="#" class="read-more" data-tr="Devamını oku →" data-en="Read more →">Devamını oku →</a>
+    <div class="blog-post-card" id="vestel">
+        <div class="blog-post-meta">
+            <span class="blog-post-date" data-tr="Eylül 2025" data-en="September 2025">Eylül 2025</span>
+            <span class="blog-post-category" data-tr="Staj" data-en="Internship">Staj</span>
         </div>
-
-        <div class="blog-post-card" id="vestel">
-            <div class="blog-post-meta">
-                <span class="blog-post-date" data-tr="Eylül 2025" data-en="September 2025">Eylül 2025</span>
-                <span class="blog-post-category" data-tr="Staj" data-en="Internship">Staj</span>
-            </div>
-            <h2 data-tr="Vestel Staj Deneyimi" data-en="Vestel Internship Experience">Vestel Staj Deneyimi</h2>
-            <p data-tr="Vestel'de Kotlin ve Jetpack Compose kullanarak Android TV uygulama geliştirme sürecine katıldım. Yazılım mimarisi, UI tasarımı ve modern Android geliştirme konularında pratik bilgi kazandım."
-               data-en="At Vestel, I participated in Android TV app development using Kotlin and Jetpack Compose. Gained practical knowledge in software architecture, UI design, and modern Android development.">
-                Vestel'de Kotlin ve Jetpack Compose kullanarak Android TV uygulama geliştirme sürecine katıldım. Yazılım mimarisi, UI tasarımı ve modern Android geliştirme konularında pratik bilgi kazandım.
-            </p>
-            <a href="#" class="read-more" data-tr="Devamını oku →" data-en="Read more →">Devamını oku →</a>
-        </div>
-
-        <div class="blog-post-card" id="android">
-            <div class="blog-post-meta">
-                <span class="blog-post-date" data-tr="Ocak 2025" data-en="January 2025">Ocak 2025</span>
-                <span class="blog-post-category">Android</span>
-            </div>
-            <h2 data-tr="Jetpack Compose ile Modern Android Geliştirme" data-en="Modern Android Development with Jetpack Compose">Jetpack Compose ile Modern Android Geliştirme</h2>
-            <p data-tr="XML layout'lardan Jetpack Compose'a geçiş sürecinde öğrendiklerimi ve iki yaklaşım arasındaki farkları anlattım."
-               data-en="What I learned transitioning from XML layouts to Jetpack Compose, and the key differences between the two approaches.">
-                XML layout'lardan Jetpack Compose'a geçiş sürecinde öğrendiklerimi ve iki yaklaşım arasındaki farkları anlattım.
-            </p>
-            <a href="#" class="read-more" data-tr="Devamını oku →" data-en="Read more →">Devamını oku →</a>
-        </div>
-
+        <h2 data-tr="Vestel Staj Deneyimi" data-en="Vestel Internship Experience">Vestel Staj Deneyimi</h2>
+        <p data-tr="Vestel'de Kotlin ve Jetpack Compose kullanarak Android TV uygulama geliştirme sürecine katıldım. Yazılım mimarisi, UI tasarımı ve modern Android geliştirme konularında pratik bilgi edindim."
+           data-en="At Vestel, I joined the Android TV app development process using Kotlin and Jetpack Compose. Gained practical knowledge in software architecture, UI design, and modern Android development.">
+            Vestel'de Kotlin ve Jetpack Compose kullanarak Android TV uygulama geliştirme sürecine katıldım. Yazılım mimarisi, UI tasarımı ve modern Android geliştirme konularında pratik bilgi edindim.
+        </p>
+        <a href="#" class="read-more" data-tr="Devamını oku →" data-en="Read more →">Devamını oku →</a>
     </div>
 
-    <footer>
-        <p data-tr="© 2025 Mehmet Usta · HTML & CSS ile yapıldı ❤️" data-en="© 2025 Mehmet Usta · Built with HTML & CSS ❤️">© 2025 Mehmet Usta · HTML & CSS ile yapıldı ❤️</p>
-    </footer>
+    <div class="blog-post-card" id="android">
+        <div class="blog-post-meta">
+            <span class="blog-post-date" data-tr="Ocak 2025" data-en="January 2025">Ocak 2025</span>
+            <span class="blog-post-category">Android</span>
+        </div>
+        <h2 data-tr="Jetpack Compose ile Modern Android Geliştirme" data-en="Modern Android Development with Jetpack Compose">Jetpack Compose ile Modern Android Geliştirme</h2>
+        <p data-tr="XML layout'lardan Jetpack Compose'a geçiş sürecinde öğrendiklerimi ve iki yaklaşım arasındaki temel farkları anlattım."
+           data-en="What I learned transitioning from XML layouts to Jetpack Compose, and the key differences between the two approaches.">
+            XML layout'lardan Jetpack Compose'a geçiş sürecinde öğrendiklerimi ve iki yaklaşım arasındaki temel farkları anlattım.
+        </p>
+        <a href="#" class="read-more" data-tr="Devamını oku →" data-en="Read more →">Devamını oku →</a>
+    </div>
 
-    <script>
-        let currentLang = 'tr';
-        function toggleLang() {
-            currentLang = currentLang === 'tr' ? 'en' : 'tr';
-            document.getElementById('lang-btn').textContent = currentLang === 'tr' ? 'EN' : 'TR';
-            document.getElementById('html-root').lang = currentLang;
-            document.querySelectorAll('[data-tr]').forEach(el => {
-                el.textContent = el.getAttribute('data-' + currentLang);
-            });
-        }
-    </script>
+</div>
+
+<footer>
+    <p data-tr="© 2025 Mehmet Usta · HTML & CSS ile yapıldı ❤️" data-en="© 2025 Mehmet Usta · Built with HTML & CSS ❤️">© 2025 Mehmet Usta · HTML & CSS ile yapıldı ❤️</p>
+</footer>
+
+<script>
+let lang = 'tr';
+function toggleLang() {
+    lang = lang === 'tr' ? 'en' : 'tr';
+    document.getElementById('lang-btn').textContent = lang === 'tr' ? 'EN' : 'TR';
+    document.getElementById('html-root').lang = lang;
+    document.querySelectorAll('[data-tr]').forEach(el => {
+        el.textContent = el.getAttribute('data-' + lang);
+    });
+}
+</script>
 
 </body>
 </html>
