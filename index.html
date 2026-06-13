@@ -4,279 +4,760 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mehmet Usta | Portfolio</title>
-    <style>* {Â    margin: 0;Â    padding: 0;Â    box-sizing: border-box;Â}ÂÂ:root {Â    --primary: #2563eb;Â    --primary-dark: #1d4ed8;Â    --text: #1e293b;Â    --text-muted: #64748b;Â    --bg: #ffffff;Â    --bg-secondary: #f8fafc;Â    --border: #e2e8f0;Â    --card-shadow: 0 1px 3px rgba(0,0,0,0.08);Â}ÂÂbody {Â    font-family: 'Segoe UI', system-ui, sans-serif;Â    color: var(--text);Â    background: var(--bg);Â    line-height: 1.6;Â}ÂÂ/* NAV */Ânav {Â    position: sticky;Â    top: 0;Â    background: rgba(255,255,255,0.95);Â    backdrop-filter: blur(8px);Â    border-bottom: 1px solid var(--border);Â    z-index: 100;Â}ÂÂ.nav-inner {Â    max-width: 900px;Â    margin: 0 auto;Â    padding: 0 1.5rem;Â    display: flex;Â    justify-content: space-between;Â    align-items: center;Â    height: 60px;Â}ÂÂ.nav-logo {Â    font-weight: 700;Â    font-size: 1.1rem;Â    color: var(--primary);Â    text-decoration: none;Â}ÂÂ.nav-links {Â    list-style: none;Â    display: flex;Â    gap: 2rem;Â}ÂÂ.nav-links a {Â    text-decoration: none;Â    color: var(--text-muted);Â    font-size: 0.9rem;Â    transition: color 0.2s;Â}ÂÂ.nav-links a:hover {Â    color: var(--primary);Â}ÂÂ/* LAYOUT */Â.container {Â    max-width: 900px;Â    margin: 0 auto;Â    padding: 0 1.5rem;Â}ÂÂsection {Â    padding: 5rem 0;Â}ÂÂsection:nth-child(even) {Â    background: var(--bg-secondary);Â}ÂÂ/* HERO */Â.hero {Â    padding: 6rem 0 4rem;Â    text-align: center;Â}ÂÂ.avatar {Â    width: 90px;Â    height: 90px;Â    border-radius: 50%;Â    background: var(--primary);Â    color: white;Â    font-size: 2rem;Â    font-weight: 700;Â    display: flex;Â    align-items: center;Â    justify-content: center;Â    margin: 0 auto 1.5rem;Â}ÂÂ.hero h1 {Â    font-size: 2.5rem;Â    font-weight: 700;Â    margin-bottom: 0.5rem;Â}ÂÂ.hero h1 span {Â    color: var(--primary);Â}ÂÂ.hero .subtitle {Â    font-size: 1.1rem;Â    color: var(--text-muted);Â    margin-bottom: 1.5rem;Â}ÂÂ.hero-tags {Â    display: flex;Â    gap: 0.5rem;Â    justify-content: center;Â    flex-wrap: wrap;Â    margin-bottom: 2rem;Â}ÂÂ.tag {Â    background: #eff6ff;Â    color: var(--primary);Â    border: 1px solid #bfdbfe;Â    padding: 4px 12px;Â    border-radius: 999px;Â    font-size: 0.8rem;Â    font-weight: 500;Â}ÂÂ.btn {Â    display: inline-block;Â    padding: 0.6rem 1.5rem;Â    border-radius: 8px;Â    text-decoration: none;Â    font-size: 0.9rem;Â    font-weight: 500;Â    transition: all 0.2s;Â    margin: 0 0.3rem;Â}ÂÂ.btn-primary {Â    background: var(--primary);Â    color: white;Â}ÂÂ.btn-primary:hover {Â    background: var(--primary-dark);Â}ÂÂ.btn-outline {Â    border: 1px solid var(--border);Â    color: var(--text);Â}ÂÂ.btn-outline:hover {Â    border-color: var(--primary);Â    color: var(--primary);Â}ÂÂ/* SECTION TITLE */Â.section-title {Â    font-size: 1.5rem;Â    font-weight: 700;Â    margin-bottom: 2rem;Â    padding-bottom: 0.75rem;Â    border-bottom: 2px solid var(--primary);Â    display: inline-block;Â}ÂÂ/* ABOUT */Â.about-grid {Â    display: grid;Â    grid-template-columns: 2fr 1fr;Â    gap: 3rem;Â    align-items: start;Â}ÂÂ.about-text p {Â    color: var(--text-muted);Â    margin-bottom: 1rem;Â}ÂÂ.skills-list {Â    display: flex;Â    flex-wrap: wrap;Â    gap: 0.5rem;Â    margin-top: 1rem;Â}ÂÂ.skill-tag {Â    background: var(--bg-secondary);Â    border: 1px solid var(--border);Â    padding: 4px 10px;Â    border-radius: 6px;Â    font-size: 0.8rem;Â    color: var(--text-muted);Â}ÂÂ.info-box {Â    background: var(--bg);Â    border: 1px solid var(--border);Â    border-radius: 12px;Â    padding: 1.25rem;Â}ÂÂ.info-item {Â    display: flex;Â    align-items: flex-start;Â    gap: 0.75rem;Â    margin-bottom: 1rem;Â    font-size: 0.9rem;Â}ÂÂ.info-item:last-child {Â    margin-bottom: 0;Â}ÂÂ.info-label {Â    color: var(--text-muted);Â    min-width: 80px;Â    font-size: 0.8rem;Â}ÂÂ/* PROJECTS */Â.projects-grid {Â    display: grid;Â    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));Â    gap: 1.25rem;Â}ÂÂ.project-card {Â    background: var(--bg);Â    border: 1px solid var(--border);Â    border-radius: 12px;Â    padding: 1.25rem;Â    transition: all 0.2s;Â    text-decoration: none;Â    color: inherit;Â    display: block;Â}ÂÂ.project-card:hover {Â    border-color: var(--primary);Â    box-shadow: 0 4px 12px rgba(37,99,235,0.1);Â    transform: translateY(-2px);Â}ÂÂ.project-card h3 {Â    font-size: 1rem;Â    font-weight: 600;Â    margin-bottom: 0.5rem;Â}ÂÂ.project-card p {Â    color: var(--text-muted);Â    font-size: 0.85rem;Â    margin-bottom: 1rem;Â}ÂÂ.project-tags {Â    display: flex;Â    gap: 0.4rem;Â    flex-wrap: wrap;Â}ÂÂ.project-tag {Â    background: #f0f9ff;Â    color: #0369a1;Â    font-size: 0.75rem;Â    padding: 2px 8px;Â    border-radius: 4px;Â}ÂÂ/* BLOG */Â.blog-list {Â    display: flex;Â    flex-direction: column;Â    gap: 1rem;Â}ÂÂ.blog-card {Â    display: flex;Â    align-items: center;Â    gap: 1.5rem;Â    padding: 1.25rem;Â    background: var(--bg);Â    border: 1px solid var(--border);Â    border-radius: 12px;Â    text-decoration: none;Â    color: inherit;Â    transition: all 0.2s;Â}ÂÂ.blog-card:hover {Â    border-color: var(--primary);Â    transform: translateX(4px);Â}ÂÂ.blog-date {Â    font-size: 0.8rem;Â    color: var(--text-muted);Â    min-width: 90px;Â    text-align: center;Â    background: var(--bg-secondary);Â    padding: 0.5rem;Â    border-radius: 8px;Â}ÂÂ.blog-date strong {Â    display: block;Â    font-size: 1.5rem;Â    color: var(--primary);Â    line-height: 1;Â}ÂÂ.blog-info h3 {Â    font-size: 1rem;Â    font-weight: 600;Â    margin-bottom: 0.25rem;Â}ÂÂ.blog-info p {Â    font-size: 0.85rem;Â    color: var(--text-muted);Â}ÂÂ/* CONTACT */Â.contact-grid {Â    display: grid;Â    grid-template-columns: 1fr 1fr;Â    gap: 2rem;Â}ÂÂ.contact-links {Â    display: flex;Â    flex-direction: column;Â    gap: 1rem;Â}ÂÂ.contact-link {Â    display: flex;Â    align-items: center;Â    gap: 1rem;Â    padding: 1rem 1.25rem;Â    background: var(--bg);Â    border: 1px solid var(--border);Â    border-radius: 10px;Â    text-decoration: none;Â    color: var(--text);Â    transition: all 0.2s;Â    font-size: 0.9rem;Â}ÂÂ.contact-link:hover {Â    border-color: var(--primary);Â    color: var(--primary);Â}ÂÂ.contact-link span {Â    font-size: 1.2rem;Â}ÂÂ/* FOOTER */Âfooter {Â    text-align: center;Â    padding: 2rem;Â    border-top: 1px solid var(--border);Â    color: var(--text-muted);Â    font-size: 0.85rem;Â}ÂÂ/* RESPONSIVE */Â@media (max-width: 600px) {Â    .hero h1 { font-size: 1.8rem; }Â    .about-grid { grid-template-columns: 1fr; }Â    .contact-grid { grid-template-columns: 1fr; }Â    .nav-links { gap: 1rem; }Â}Â</style>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #7c3aed;
+    --primary-dark: #6d28d9;
+    --primary-light: #ede9fe;
+    --primary-border: #c4b5fd;
+    --text: #1e1b4b;
+    --text-muted: #6b7280;
+    --bg: #ffffff;
+    --bg-secondary: #faf5ff;
+    --border: #e5e7eb;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+}
+
+/* NAV */
+nav {
+    position: sticky;
+    top: 0;
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+    z-index: 100;
+}
+
+.nav-inner {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 62px;
+}
+
+.nav-logo {
+    font-weight: 800;
+    font-size: 1.15rem;
+    color: var(--primary);
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.8rem;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.lang-btn {
+    background: var(--primary-light);
+    border: 1px solid var(--primary-border);
+    color: var(--primary);
+    padding: 4px 14px;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 0.82rem;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.lang-btn:hover {
+    background: var(--primary);
+    color: white;
+}
+
+/* LAYOUT */
+.container {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+section {
+    padding: 5rem 0;
+}
+
+section:nth-child(even) {
+    background: var(--bg-secondary);
+}
+
+/* HERO */
+.hero {
+    padding: 7rem 0 5rem;
+    text-align: center;
+    background: linear-gradient(135deg, #faf5ff 0%, #ffffff 60%);
+}
+
+.avatar {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: white;
+    font-size: 2.2rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    box-shadow: 0 4px 24px rgba(124,58,237,0.25);
+}
+
+.hero h1 {
+    font-size: 2.6rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+    letter-spacing: -1px;
+}
+
+.hero h1 .highlight {
+    color: var(--primary);
+}
+
+.hero .subtitle {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    margin-bottom: 1.75rem;
+}
+
+.hero-tags {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2.25rem;
+}
+
+.tag {
+    background: var(--primary-light);
+    color: var(--primary);
+    border: 1px solid var(--primary-border);
+    padding: 5px 14px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.65rem 1.6rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.2s;
+    margin: 0 0.3rem;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+    box-shadow: 0 2px 12px rgba(124,58,237,0.3);
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+}
+
+.btn-outline {
+    border: 1.5px solid var(--primary-border);
+    color: var(--primary);
+    background: var(--primary-light);
+}
+
+.btn-outline:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-1px);
+}
+
+/* SECTION TITLE */
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 3px solid var(--primary);
+    display: inline-block;
+    color: var(--text);
+    letter-spacing: -0.5px;
+}
+
+/* ABOUT */
+.about-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.about-text p {
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    font-size: 0.97rem;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.25rem;
+}
+
+.skill-tag {
+    background: var(--primary-light);
+    border: 1px solid var(--primary-border);
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    color: var(--primary);
+    font-weight: 500;
+}
+
+.info-box {
+    background: var(--bg);
+    border: 1.5px solid var(--primary-border);
+    border-radius: 14px;
+    padding: 1.35rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 0.9rem;
+    font-size: 0.88rem;
+}
+
+.info-item:last-child { margin-bottom: 0; }
+
+.info-label {
+    color: var(--text-muted);
+    min-width: 72px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding-top: 2px;
+}
+
+/* EXPERIENCE */
+.exp-card {
+    background: var(--bg);
+    border: 1.5px solid var(--primary-border);
+    border-radius: 14px;
+    padding: 1.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+    gap: 1rem;
+}
+
+.exp-title {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--text);
+}
+
+.exp-company {
+    color: var(--primary);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.exp-date {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    background: var(--primary-light);
+    padding: 3px 10px;
+    border-radius: 999px;
+    white-space: nowrap;
+    border: 1px solid var(--primary-border);
+}
+
+.exp-list {
+    list-style: none;
+    padding: 0;
+}
+
+.exp-list li {
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    padding: 3px 0 3px 1rem;
+    position: relative;
+}
+
+.exp-list li::before {
+    content: '▸';
+    color: var(--primary);
+    position: absolute;
+    left: 0;
+}
+
+/* PROJECTS */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 1.25rem;
+}
+
+.project-card {
+    background: var(--bg);
+    border: 1.5px solid var(--border);
+    border-radius: 14px;
+    padding: 1.35rem;
+    transition: all 0.2s;
+}
+
+.project-card:hover {
+    border-color: var(--primary);
+    box-shadow: 0 4px 20px rgba(124,58,237,0.12);
+    transform: translateY(-3px);
+}
+
+.project-card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+}
+
+.project-card p {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.project-tags {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+}
+
+.project-tag {
+    background: var(--primary-light);
+    color: var(--primary);
+    font-size: 0.75rem;
+    padding: 2px 9px;
+    border-radius: 5px;
+    font-weight: 500;
+    border: 1px solid var(--primary-border);
+}
+
+/* BLOG */
+.blog-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.blog-card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.25rem;
+    background: var(--bg);
+    border: 1.5px solid var(--border);
+    border-radius: 14px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s;
+}
+
+.blog-card:hover {
+    border-color: var(--primary);
+    transform: translateX(5px);
+    box-shadow: 0 2px 12px rgba(124,58,237,0.1);
+}
+
+.blog-date {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    min-width: 80px;
+    text-align: center;
+    background: var(--primary-light);
+    padding: 0.6rem;
+    border-radius: 10px;
+    border: 1px solid var(--primary-border);
+}
+
+.blog-date strong {
+    display: block;
+    font-size: 1.6rem;
+    color: var(--primary);
+    line-height: 1;
+    font-weight: 800;
+}
+
+.blog-info h3 {
+    font-size: 0.97rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    color: var(--text);
+}
+
+.blog-info p {
+    font-size: 0.84rem;
+    color: var(--text-muted);
+}
+
+/* CONTACT */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.9rem 1.25rem;
+    background: var(--bg);
+    border: 1.5px solid var(--border);
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--text);
+    transition: all 0.2s;
+    font-size: 0.88rem;
+}
+
+.contact-link:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+    background: var(--primary-light);
+}
+
+.contact-link span {
+    font-size: 1.2rem;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    background: var(--bg-secondary);
+}
+
+/* RESPONSIVE */
+@media (max-width: 640px) {
+    .hero h1 { font-size: 1.9rem; }
+    .about-grid { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .nav-links { gap: 1rem; }
+    .exp-header { flex-direction: column; gap: 0.5rem; }
+}
+
+    </style>
 </head>
 <body>
 
-    <!-- NAV -->
-    <nav>
-        <div class="nav-inner">
-            <a href="index.html" class="nav-logo">mehmetusta</a>
-            <ul class="nav-links">
-                <li><a href="#hakkimda" data-tr="HakkÄ±mda" data-en="About">HakkÄ±mda</a></li>
-                <li><a href="#projeler" data-tr="Projeler" data-en="Projects">Projeler</a></li>
-                <li><a href="blog.html" data-tr="Blog" data-en="Blog">Blog</a></li>
-                <li><a href="#iletisim" data-tr="Ä°letiÅim" data-en="Contact">Ä°letiÅim</a></li>
-                <li>
-                    <button onclick="toggleLang()" id="lang-btn" style="background:none;border:1px solid var(--border);padding:4px 12px;border-radius:6px;cursor:pointer;font-size:0.85rem;color:var(--text-muted);">EN</button>
-                </li>
+<nav>
+    <div class="nav-inner">
+        <a href="index.html" class="nav-logo">mehmetusta</a>
+        <ul class="nav-links">
+            <li><a href="#about" data-tr="Hakkımda" data-en="About">Hakkımda</a></li>
+            <li><a href="#experience" data-tr="Deneyim" data-en="Experience">Deneyim</a></li>
+            <li><a href="#projects" data-tr="Projeler" data-en="Projects">Projeler</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="#contact" data-tr="İletişim" data-en="Contact">İletişim</a></li>
+            <li><button class="lang-btn" onclick="toggleLang()" id="lang-btn">EN</button></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="container">
+        <div class="avatar">MU</div>
+        <h1>
+            <span data-tr="Merhaba, ben " data-en="Hi, I'm ">Merhaba, ben </span><span class="highlight">Mehmet</span> 👋
+        </h1>
+        <p class="subtitle" data-tr="Bilgisayar Mühendisliği Öğrencisi · Manisa Celal Bayar Üniversitesi" data-en="Computer Engineering Student · Manisa Celal Bayar University">Bilgisayar Mühendisliği Öğrencisi · Manisa Celal Bayar Üniversitesi</p>
+        <div class="hero-tags">
+            <span class="tag">Android / Kotlin</span>
+            <span class="tag">Jetpack Compose</span>
+            <span class="tag" data-tr="Yapay Zeka / NLP" data-en="AI / NLP">Yapay Zeka / NLP</span>
+            <span class="tag">Java · Python</span>
+        </div>
+        <div>
+            <a href="#projects" class="btn btn-primary" data-tr="Projelerimi Gör" data-en="See Projects">Projelerimi Gör</a>
+            <a href="https://github.com/mehmetusta03" class="btn btn-outline" target="_blank">GitHub</a>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <div class="container">
+        <h2 class="section-title" data-tr="Hakkımda" data-en="About Me">Hakkımda</h2>
+        <div class="about-grid">
+            <div class="about-text">
+                <p data-tr="Manisa Celal Bayar Üniversitesi'nde Bilgisayar Mühendisliği 3. sınıf öğrencisiyim. Android uygulama geliştirme, Yapay Zeka ve Doğal Dil İşleme (NLP) alanlarında güçlü bir ilgim var."
+                   data-en="I am a 3rd year Computer Engineering student at Manisa Celal Bayar University with a strong interest in Android application development, Artificial Intelligence, and Natural Language Processing (NLP).">
+                    Manisa Celal Bayar Üniversitesi'nde Bilgisayar Mühendisliği 3. sınıf öğrencisiyim. Android uygulama geliştirme, Yapay Zeka ve Doğal Dil İşleme (NLP) alanlarında güçlü bir ilgim var.
+                </p>
+                <p data-tr="Kotlin, Java ve Jetpack Compose kullanarak modern mobil uygulamalar geliştirme konusunda deneyimliyim. Yazılım geliştirme becerilerimi iyileştirme ve yapay zeka teknolojilerinde uzmanlaşma konusunda tutkuluyum."
+                   data-en="Experienced in developing modern mobile applications using Kotlin, Java, and Jetpack Compose. Passionate about improving my software development skills and specializing in AI technologies.">
+                    Kotlin, Java ve Jetpack Compose kullanarak modern mobil uygulamalar geliştirme konusunda deneyimliyim. Yazılım geliştirme becerilerimi iyileştirme ve yapay zeka teknolojilerinde uzmanlaşma konusunda tutkuluyum.
+                </p>
+                <div class="skills-list">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">Kotlin</span>
+                    <span class="skill-tag">HTML / CSS</span>
+                    <span class="skill-tag">Jetpack Compose</span>
+                    <span class="skill-tag">Android SDK</span>
+                    <span class="skill-tag">MySQL</span>
+                    <span class="skill-tag">PostgreSQL</span>
+                    <span class="skill-tag">Git / GitHub</span>
+                    <span class="skill-tag">Android Studio</span>
+                    <span class="skill-tag">VS Code</span>
+                </div>
+            </div>
+            <div class="info-box">
+                <div class="info-item">
+                    <span class="info-label" data-tr="Okul" data-en="University">Okul</span>
+                    <span>Manisa Celal Bayar Üniversitesi</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label" data-tr="Bölüm" data-en="Major">Bölüm</span>
+                    <span data-tr="Bilgisayar Mühendisliği" data-en="Computer Engineering">Bilgisayar Mühendisliği</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">GPA</span>
+                    <span>2.81 / 4.00</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label" data-tr="Staj" data-en="Internship">Staj</span>
+                    <span>Vestel · İzmir</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label" data-tr="Ödül" data-en="Award">Ödül</span>
+                    <span>🥇 MedHack 2025 — 1.</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label" data-tr="Şehir" data-en="Location">Şehir</span>
+                    <span>Afyonkarahisar, Türkiye</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label" data-tr="Dil" data-en="Languages">Dil</span>
+                    <span data-tr="Türkçe (Ana dil) · İngilizce B1" data-en="Turkish (Native) · English B1">Türkçe (Ana dil) · İngilizce B1</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+    <div class="container">
+        <h2 class="section-title" data-tr="Deneyim" data-en="Experience">Deneyim</h2>
+
+        <div class="exp-card">
+            <div class="exp-header">
+                <div>
+                    <div class="exp-title" data-tr="Yazılım Geliştirme Stajyeri" data-en="Software Development Intern">Yazılım Geliştirme Stajyeri</div>
+                    <div class="exp-company">Vestel · İzmir, Türkiye</div>
+                </div>
+                <span class="exp-date" data-tr="Haz – Eyl 2025" data-en="Jun – Sep 2025">Haz – Eyl 2025</span>
+            </div>
+            <ul class="exp-list">
+                <li data-tr="Kotlin ve Jetpack Compose kullanarak Android uygulama geliştirme süreçlerine katıldım." data-en="Participated in Android application development processes using Kotlin and Jetpack Compose.">Kotlin ve Jetpack Compose kullanarak Android uygulama geliştirme süreçlerine katıldım.</li>
+                <li data-tr="Android Studio'da kullanıcı odaklı arayüzler geliştirdim." data-en="Developed user-oriented interfaces in Android Studio.">Android Studio'da kullanıcı odaklı arayüzler geliştirdim.</li>
+                <li data-tr="Android TV platformu uygulamaları üzerinde çalıştım ve TV uygulama geliştirme deneyimi kazandım." data-en="Worked on Android TV platform applications and gained experience in TV app development.">Android TV platformu uygulamaları üzerinde çalıştım ve TV uygulama geliştirme deneyimi kazandım.</li>
+                <li data-tr="Yazılım mimarisi, UI tasarımı ve modern Android geliştirme konularında pratik bilgi kazandım." data-en="Improved practical knowledge in software architecture, UI design, and modern Android development.">Yazılım mimarisi, UI tasarımı ve modern Android geliştirme konularında pratik bilgi kazandım.</li>
             </ul>
         </div>
-    </nav>
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="container">
-            <div class="avatar">MU</div>
-            <h1>
-                <span data-tr="Merhaba, ben " data-en="Hi, I'm ">Merhaba, ben </span>
-                <span style="color:var(--primary)">Mehmet</span>
-                <span> ð</span>
-            </h1>
-            <p class="subtitle" data-tr="Bilgisayar MÃ¼hendisliÄi ÃÄrencisi Â· Manisa Celal Bayar Ãniversitesi" data-en="Computer Engineering Student Â· Manisa Celal Bayar University">
-                Bilgisayar MÃ¼hendisliÄi ÃÄrencisi Â· Manisa Celal Bayar Ãniversitesi
-            </p>
-            <div class="hero-tags">
-                <span class="tag">Android / Kotlin</span>
-                <span class="tag">Jetpack Compose</span>
-                <span class="tag" data-tr="Yapay Zeka" data-en="AI / NLP">Yapay Zeka</span>
-                <span class="tag">Java / Python</span>
-            </div>
-            <div>
-                <a href="#projeler" class="btn btn-primary" data-tr="Projelerimi GÃ¶r" data-en="See Projects">Projelerimi GÃ¶r</a>
-                <a href="https://github.com/mehmetusta03" class="btn btn-outline" target="_blank">GitHub</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- HAKKIMDA -->
-    <section id="hakkimda">
-        <div class="container">
-            <h2 class="section-title" data-tr="HakkÄ±mda" data-en="About">HakkÄ±mda</h2>
-            <div class="about-grid">
-                <div class="about-text">
-                    <p data-tr="Manisa Celal Bayar Ãniversitesi'nde Bilgisayar MÃ¼hendisliÄi 3. sÄ±nÄ±f Ã¶Ärencisiyim. Android uygulama geliÅtirme, Yapay Zeka ve DoÄal Dil Ä°Åleme (NLP) alanlarÄ±nda gÃ¼Ã
-lÃ¼ bir ilgim var."
-                       data-en="I'm a 3rd year Computer Engineering student at Manisa Celal Bayar University, with a strong interest in Android application development, Artificial Intelligence, and Natural Language Processing (NLP).">
-                        Manisa Celal Bayar Ãniversitesi'nde Bilgisayar MÃ¼hendisliÄi 3. sÄ±nÄ±f Ã¶Ärencisiyim. Android uygulama geliÅtirme, Yapay Zeka ve DoÄal Dil Ä°Åleme (NLP) alanlarÄ±nda gÃ¼Ã
-lÃ¼ bir ilgim var.
-                    </p>
-                    <p data-tr="Kotlin, Java ve Jetpack Compose kullanarak modern mobil uygulamalar geliÅtirme konusunda deneyimliyim. YazÄ±lÄ±m geliÅtirme becerilerimi iyileÅtirme ve AI teknolojilerinde uzmanlaÅma konusunda tutkuluyum."
-                       data-en="Experienced in developing modern mobile applications using Kotlin, Java, and Jetpack Compose. Passionate about improving software development skills and specializing in AI technologies.">
-                        Kotlin, Java ve Jetpack Compose kullanarak modern mobil uygulamalar geliÅtirme konusunda deneyimliyim. YazÄ±lÄ±m geliÅtirme becerilerimi iyileÅtirme ve AI teknolojilerinde uzmanlaÅma konusunda tutkuluyum.
-                    </p>
-                    <div class="skills-list">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">Kotlin</span>
-                        <span class="skill-tag">HTML / CSS</span>
-                        <span class="skill-tag">Jetpack Compose</span>
-                        <span class="skill-tag">Android SDK</span>
-                        <span class="skill-tag">MySQL</span>
-                        <span class="skill-tag">PostgreSQL</span>
-                        <span class="skill-tag">Git / GitHub</span>
-                        <span class="skill-tag">Android Studio</span>
-                        <span class="skill-tag">VS Code</span>
-                    </div>
-                </div>
-                <div class="info-box">
-                    <div class="info-item">
-                        <span class="info-label" data-tr="Okul" data-en="University">Okul</span>
-                        <span>Manisa CBÃ</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label" data-tr="BÃ¶lÃ¼m" data-en="Major">BÃ¶lÃ¼m</span>
-                        <span data-tr="Bilgisayar MÃ¼h." data-en="Computer Eng.">Bilgisayar MÃ¼h.</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">GPA</span>
-                        <span>2.81 / 4.00</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label" data-tr="Staj" data-en="Internship">Staj</span>
-                        <span>Vestel Â· Ä°zmir</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label" data-tr="ÃdÃ¼l" data-en="Award">ÃdÃ¼l</span>
-                        <span>ð¥ MedHack 1.</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label" data-tr="Åehir" data-en="City">Åehir</span>
-                        <span>Afyonkarahisar, TR</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label" data-tr="Dil" data-en="Language">Dil</span>
-                        <span data-tr="Ä°ngilizce B1 Â· TÃ¼rkÃ
-e Ana dil" data-en="English B1 Â· Turkish Native">Ä°ngilizce B1 Â· TÃ¼rkÃ
-e Ana dil</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PROJELER -->
-    <section id="projeler">
-        <div class="container">
-            <h2 class="section-title" data-tr="Projeler" data-en="Projects">Projeler</h2>
-            <div class="projects-grid">
-
-                <div class="project-card">
-                    <h3 data-tr="ðº Smart TV Uygulama Projesi" data-en="ðº Smart TV Application Project">ðº Smart TV Uygulama Projesi</h3>
-                    <p data-tr="KullanÄ±cÄ± dostu bir Android TV uygulamasÄ± geliÅtirdim. TV arayÃ¼z tasarÄ±mÄ±, uzaktan kumanda navigasyonu ve bÃ¼yÃ¼k ekran kullanÄ±cÄ± deneyimi Ã¼zerine Ã
-alÄ±ÅtÄ±m."
-                       data-en="Contributed to a user-friendly Android TV app. Worked on TV interface design, remote control navigation, and large-screen UX using Kotlin and Jetpack Compose.">
-                        KullanÄ±cÄ± dostu bir Android TV uygulamasÄ± geliÅtirdim. TV arayÃ¼z tasarÄ±mÄ±, uzaktan kumanda navigasyonu ve bÃ¼yÃ¼k ekran kullanÄ±cÄ± deneyimi Ã¼zerine Ã
-alÄ±ÅtÄ±m.
-                    </p>
-                    <div class="project-tags">
-                        <span class="project-tag">Kotlin</span>
-                        <span class="project-tag">Jetpack Compose</span>
-                        <span class="project-tag">Android TV</span>
-                        <span class="project-tag">Android Studio</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <h3 data-tr="â½ Lig SimÃ¼lasyon Projesi" data-en="â½ League Simulation Project">â½ Lig SimÃ¼lasyon Projesi</h3>
-                    <p data-tr="Temel bir futbol ligi simÃ¼lasyon sistemi geliÅtirdim. MaÃ
- sonuÃ
-larÄ±, lig sÄ±ralamasÄ± ve skor hesaplamalarÄ± iÃ
-in algoritmalar tasarladÄ±m. OOP prensiplerini uyguladÄ±m."
-                       data-en="Developed a basic football league simulation system. Designed algorithms for match results, league standings, and score calculations using OOP principles.">
-                        Temel bir futbol ligi simÃ¼lasyon sistemi geliÅtirdim. MaÃ
- sonuÃ
-larÄ±, lig sÄ±ralamasÄ± ve skor hesaplamalarÄ± iÃ
-in algoritmalar tasarladÄ±m. OOP prensiplerini uyguladÄ±m.
-                    </p>
-                    <div class="project-tags">
-                        <span class="project-tag">Java</span>
-                        <span class="project-tag">OOP</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <h3 data-tr="ð¨âð©âð
- Aile TanÄ±tÄ±m Android UygulamasÄ±" data-en="ð¨âð©âð
- Family Introduction Android App">ð¨âð©âð
- Aile TanÄ±tÄ±m Android UygulamasÄ±</h3>
-                    <p data-tr="Aile Ã¼yelerini tanÄ±tan modern bir Android uygulamasÄ± geliÅtirdim. Her birey iÃ
-in fotoÄraf, biyografi ve kiÅisel bilgiler iÃ
-eren bÃ¶lÃ¼mler oluÅturdum."
-                       data-en="Developed a modern Android app introducing family members with photos, biographies, and personal info. Implemented dynamic single-page content display using Jetpack Compose.">
-                        Aile Ã¼yelerini tanÄ±tan modern bir Android uygulamasÄ± geliÅtirdim. Her birey iÃ
-in fotoÄraf, biyografi ve kiÅisel bilgiler iÃ
-eren bÃ¶lÃ¼mler oluÅturdum.
-                    </p>
-                    <div class="project-tags">
-                        <span class="project-tag">Kotlin</span>
-                        <span class="project-tag">Jetpack Compose</span>
-                        <span class="project-tag">Android Studio</span>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- BLOG ÃN Ä°ZLEME -->
-    <section id="blog">
-        <div class="container">
-            <h2 class="section-title" data-tr="Son YazÄ±lar" data-en="Latest Posts">Son YazÄ±lar</h2>
-            <div class="blog-list">
-                <a href="blog.html#medhack" class="blog-card">
-                    <div class="blog-date">
-                        <strong>20</strong>
-                        <span data-tr="Mar 2025" data-en="Mar 2025">Mar 2025</span>
-                    </div>
-                    <div class="blog-info">
-                        <h3 data-tr="MedHack Deneyimi: Birinci Olmak" data-en="MedHack Experience: Winning 1st Place">MedHack Deneyimi: Birinci Olmak</h3>
-                        <p data-tr="Google'Ä±n MedGemma modelini tamamen cihaz Ã¼zerinde Ã
-alÄ±ÅtÄ±rdÄ±k. JÃ¼ri, gizlilik odaklÄ± mimariyi birinci sÄ±raya taÅÄ±dÄ±."
-                           data-en="We deployed Google's MedGemma entirely on-device. Judges awarded 1st place citing privacy-first architecture.">
-                            Google'Ä±n MedGemma modelini tamamen cihaz Ã¼zerinde Ã
-alÄ±ÅtÄ±rdÄ±k. JÃ¼ri, gizlilik odaklÄ± mimariyi birinci sÄ±raya taÅÄ±dÄ±.
-                        </p>
-                    </div>
-                </a>
-                <a href="blog.html#vestel" class="blog-card">
-                    <div class="blog-date">
-                        <strong>09</strong>
-                        <span data-tr="Eyl 2025" data-en="Sep 2025">Eyl 2025</span>
-                    </div>
-                    <div class="blog-info">
-                        <h3 data-tr="Vestel Staj Deneyimi" data-en="Vestel Internship Experience">Vestel Staj Deneyimi</h3>
-                        <p data-tr="Kotlin ve Jetpack Compose ile Android TV uygulama geliÅtirme sÃ¼recinde neler Ã¶Ärendim."
-                           data-en="What I learned developing Android TV apps with Kotlin and Jetpack Compose at Vestel.">
-                            Kotlin ve Jetpack Compose ile Android TV uygulama geliÅtirme sÃ¼recinde neler Ã¶Ärendim.
-                        </p>
-                    </div>
-                </a>
-            </div>
-            <div style="margin-top: 1.5rem;">
-                <a href="blog.html" class="btn btn-outline" data-tr="TÃ¼m YazÄ±lar â" data-en="All Posts â">TÃ¼m YazÄ±lar â</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Ä°LETÄ°ÅÄ°M -->
-    <section id="iletisim">
-        <div class="container">
-            <h2 class="section-title" data-tr="Ä°letiÅim" data-en="Contact">Ä°letiÅim</h2>
-            <div class="contact-grid">
+        <div class="exp-card">
+            <div class="exp-header">
                 <div>
-                    <p style="color:var(--text-muted);margin-bottom:1.5rem;"
-                       data-tr="Proje iÅ birliÄi, soru veya sadece merhaba demek iÃ
-in ulaÅabilirsin!"
-                       data-en="Feel free to reach out for collaborations, questions, or just to say hi!">
-                        Proje iÅ birliÄi, soru veya sadece merhaba demek iÃ
-in ulaÅabilirsin!
-                    </p>
-                    <div class="contact-links">
-                        <a href="mailto:mehmetustasb@gmail.com" class="contact-link">
-                            <span>ð
-</span> mehmetustasb@gmail.com
-                        </a>
-                        <a href="tel:+905464043852" class="contact-link">
-                            <span>ð</span> +90 546 404 38 52
-                        </a>
-                        <a href="https://github.com/mehmetusta03" target="_blank" class="contact-link">
-                            <span>ð</span> github.com/mehmetusta03
-                        </a>
-                        <a href="https://linkedin.com/in/mehmet-usta-14046a340" target="_blank" class="contact-link">
-                            <span>ð¼</span> linkedin.com/in/mehmet-usta-14046a340
-                        </a>
-                    </div>
+                    <div class="exp-title" data-tr="Gönüllü" data-en="Volunteer">Gönüllü</div>
+                    <div class="exp-company">Ege Career Fair</div>
                 </div>
-                <div style="background:var(--bg-secondary);border-radius:12px;padding:1.5rem;border:1px solid var(--border);">
-                    <p style="font-size:0.9rem;color:var(--text-muted);line-height:2;">
-                        ð Manisa Celal Bayar Ãniversitesi<br>
-                        ð­ Vestel â <span data-tr="YazÄ±lÄ±m GeliÅtirme Stajyeri" data-en="Software Development Intern">YazÄ±lÄ±m GeliÅtirme Stajyeri</span><br>
-                        ð¥ MedHack 2025 â <span data-tr="1. lik" data-en="1st Place">1. lik</span><br>
-                        ð Afyonkarahisar, TÃ¼rkiye
-                    </p>
+                <span class="exp-date">2025</span>
+            </div>
+            <ul class="exp-list">
+                <li data-tr="Etkinlik organizasyonu ve koordinasyon faaliyetlerine destek verdim." data-en="Assisted in event organization and coordination activities.">Etkinlik organizasyonu ve koordinasyon faaliyetlerine destek verdim.</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+    <div class="container">
+        <h2 class="section-title" data-tr="Projeler" data-en="Projects">Projeler</h2>
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <h3 data-tr="📺 Smart TV Uygulama Projesi" data-en="📺 Smart TV Application Project">📺 Smart TV Uygulama Projesi</h3>
+                <p data-tr="Kullanıcı dostu bir Android TV uygulaması geliştirdim. TV arayüz tasarımı, uzaktan kumanda navigasyonu ve büyük ekran kullanıcı deneyimi üzerine çalıştım." data-en="Contributed to a user-friendly Android TV app. Worked on TV interface design, remote control navigation, and large-screen UX.">Kullanıcı dostu bir Android TV uygulaması geliştirdim. TV arayüz tasarımı, uzaktan kumanda navigasyonu ve büyük ekran kullanıcı deneyimi üzerine çalıştım.</p>
+                <div class="project-tags">
+                    <span class="project-tag">Kotlin</span>
+                    <span class="project-tag">Jetpack Compose</span>
+                    <span class="project-tag">Android TV</span>
+                    <span class="project-tag">Android Studio</span>
                 </div>
             </div>
+
+            <div class="project-card">
+                <h3 data-tr="⚽ Lig Simülasyon Projesi" data-en="⚽ League Simulation Project">⚽ Lig Simülasyon Projesi</h3>
+                <p data-tr="Temel bir futbol ligi simülasyon sistemi geliştirdim. Maç sonuçları, lig sıralaması ve skor hesaplamaları için algoritmalar tasarladım. OOP prensiplerini uyguladım." data-en="Developed a basic football league simulation system. Designed algorithms for match results, standings, and score calculations. Applied OOP principles.">Temel bir futbol ligi simülasyon sistemi geliştirdim. Maç sonuçları, lig sıralaması ve skor hesaplamaları için algoritmalar tasarladım. OOP prensiplerini uyguladım.</p>
+                <div class="project-tags">
+                    <span class="project-tag">Java</span>
+                    <span class="project-tag">OOP</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3 data-tr="👨‍👩‍👧 Aile Tanıtım Android Uygulaması" data-en="👨‍👩‍👧 Family Introduction Android App">👨‍👩‍👧 Aile Tanıtım Android Uygulaması</h3>
+                <p data-tr="Aile üyelerini tanıtan modern bir Android uygulaması. Her birey için fotoğraf, biyografi ve kişisel bilgiler içeren dinamik bölümler oluşturdum." data-en="A modern Android app introducing family members with dedicated sections for photos, biographies, and personal info. Dynamic single-page display logic.">Aile üyelerini tanıtan modern bir Android uygulaması. Her birey için fotoğraf, biyografi ve kişisel bilgiler içeren dinamik bölümler oluşturdum.</p>
+                <div class="project-tags">
+                    <span class="project-tag">Kotlin</span>
+                    <span class="project-tag">Jetpack Compose</span>
+                    <span class="project-tag">Android Studio</span>
+                </div>
+            </div>
+
         </div>
-    </section>
+    </div>
+</section>
 
-    <footer>
-        <p data-tr="Â© 2025 Mehmet Usta Â· HTML & CSS ile yapÄ±ldÄ± â¤ï¸" data-en="Â© 2025 Mehmet Usta Â· Built with HTML & CSS â¤ï¸">Â© 2025 Mehmet Usta Â· HTML & CSS ile yapÄ±ldÄ± â¤ï¸</p>
-    </footer>
+<!-- BLOG -->
+<section id="blog">
+    <div class="container">
+        <h2 class="section-title" data-tr="Son Yazılar" data-en="Latest Posts">Son Yazılar</h2>
+        <div class="blog-list">
 
-    <script>
-        let currentLang = 'tr';
+            <a href="blog.html#medhack" class="blog-card">
+                <div class="blog-date">
+                    <strong>20</strong>
+                    <span data-tr="Mar 2025" data-en="Mar 2025">Mar 2025</span>
+                </div>
+                <div class="blog-info">
+                    <h3 data-tr="MedHack Deneyimi: Birinci Olmak 🥇" data-en="MedHack Experience: Winning 1st Place 🥇">MedHack Deneyimi: Birinci Olmak 🥇</h3>
+                    <p data-tr="Google'ın MedGemma modelini tamamen cihaz üzerinde çalıştırdık. Jüri, gizlilik odaklı mimariyi birinci sıraya taşıdı." data-en="We deployed Google's MedGemma entirely on-device. Judges awarded 1st place for privacy-first architecture.">Google'ın MedGemma modelini tamamen cihaz üzerinde çalıştırdık. Jüri, gizlilik odaklı mimariyi birinci sıraya taşıdı.</p>
+                </div>
+            </a>
 
-        function toggleLang() {
-            currentLang = currentLang === 'tr' ? 'en' : 'tr';
-            document.getElementById('lang-btn').textContent = currentLang === 'tr' ? 'EN' : 'TR';
-            document.getElementById('html-root').lang = currentLang;
+            <a href="blog.html#vestel" class="blog-card">
+                <div class="blog-date">
+                    <strong>09</strong>
+                    <span data-tr="Eyl 2025" data-en="Sep 2025">Eyl 2025</span>
+                </div>
+                <div class="blog-info">
+                    <h3 data-tr="Vestel Staj Deneyimi" data-en="Vestel Internship Experience">Vestel Staj Deneyimi</h3>
+                    <p data-tr="Kotlin ve Jetpack Compose ile Android TV geliştirirken neler öğrendim." data-en="What I learned developing Android TV apps with Kotlin and Jetpack Compose at Vestel.">Kotlin ve Jetpack Compose ile Android TV geliştirirken neler öğrendim.</p>
+                </div>
+            </a>
 
-            document.querySelectorAll('[data-tr]').forEach(el => {
-                el.textContent = el.getAttribute('data-' + currentLang);
-            });
-        }
-    </script>
+        </div>
+        <div style="margin-top:1.5rem;">
+            <a href="blog.html" class="btn btn-outline" data-tr="Tüm Yazılar →" data-en="All Posts →">Tüm Yazılar →</a>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <div class="container">
+        <h2 class="section-title" data-tr="İletişim" data-en="Contact">İletişim</h2>
+        <div class="contact-grid">
+            <div>
+                <p style="color:var(--text-muted);margin-bottom:1.5rem;font-size:0.95rem;"
+                   data-tr="Proje iş birliği, soru veya sadece merhaba demek için ulaşabilirsin!"
+                   data-en="Feel free to reach out for collaborations, questions, or just to say hi!">
+                    Proje iş birliği, soru veya sadece merhaba demek için ulaşabilirsin!
+                </p>
+                <div class="contact-links">
+                    <a href="mailto:mehmetustasb@gmail.com" class="contact-link">
+                        <span>📧</span> mehmetustasb@gmail.com
+                    </a>
+                    <a href="tel:+905464043852" class="contact-link">
+                        <span>📞</span> +90 546 404 38 52
+                    </a>
+                    <a href="https://github.com/mehmetusta03" target="_blank" class="contact-link">
+                        <span>🐙</span> github.com/mehmetusta03
+                    </a>
+                    <a href="https://linkedin.com/in/mehmet-usta-14046a340" target="_blank" class="contact-link">
+                        <span>💼</span> linkedin.com/in/mehmet-usta-14046a340
+                    </a>
+                </div>
+            </div>
+            <div style="background:var(--primary-light);border:1.5px solid var(--primary-border);border-radius:14px;padding:1.5rem;">
+                <p style="font-size:0.9rem;color:var(--text);line-height:2.2;">
+                    🎓 Manisa Celal Bayar Üniversitesi<br>
+                    🏭 Vestel — <span data-tr="Yazılım Geliştirme Stajyeri" data-en="Software Development Intern">Yazılım Geliştirme Stajyeri</span><br>
+                    🥇 MedHack 2025 — <span data-tr="1. lik" data-en="1st Place">1. lik</span><br>
+                    📍 Afyonkarahisar, Türkiye
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p data-tr="© 2025 Mehmet Usta · HTML & CSS ile yapıldı ❤️" data-en="© 2025 Mehmet Usta · Built with HTML & CSS ❤️">© 2025 Mehmet Usta · HTML & CSS ile yapıldı ❤️</p>
+</footer>
+
+<script>
+let lang = 'tr';
+function toggleLang() {
+    lang = lang === 'tr' ? 'en' : 'tr';
+    document.getElementById('lang-btn').textContent = lang === 'tr' ? 'EN' : 'TR';
+    document.getElementById('html-root').lang = lang;
+    document.querySelectorAll('[data-tr]').forEach(el => {
+        el.textContent = el.getAttribute('data-' + lang);
+    });
+}
+</script>
 
 </body>
 </html>
