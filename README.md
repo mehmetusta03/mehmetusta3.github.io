@@ -68,3 +68,4 @@ Birkaç dakika sonra:
     <a href="#" class="read-more">Devamını oku →</a>
 </div>
 ```
+ 
